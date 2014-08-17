@@ -31,19 +31,11 @@ Then we instantiate a new grunt_angular box
 
     docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t grunt_angular
 
+Parameters Explanation:
+
 - name muzza -> name our instance 'muzza'
 - p 9000:9000  -> forward port 9000 on port on 9000
 - v HOST_PROJECT_PATH:CONTAINER_PROJECT_PATH -> we allocate the project's folder inside the container.
 - i -> Keep STDIN open even if not attached 
 - t -> llocate a pseudo-tty
 - grunt_angular -> container image being used
-
-
-
-
-
-
-
-
-
-docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t grunt_angular
