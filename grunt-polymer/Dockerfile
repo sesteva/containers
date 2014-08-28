@@ -1,6 +1,6 @@
 FROM yeoman
 
-RUN npm install -g generator-angular coffee-script
+RUN npm install -g generator-polymer
 
 RUN mkdir -p /home/project
 
@@ -12,4 +12,3 @@ CMD cd /home/project && \
 WORKDIR /home/project
 
 EXPOSE 9000
-
