@@ -14,6 +14,11 @@
     cd /node-bower-grunt-sass-yeoman
     docker build -t yeoman .
 
+### Yeoman + Polymer box
+
+    cd /grunt-polymer
+    docker build -t grunt_polymer .
+
 ### Yeoman  + Angular box
 
     cd /grunt-angular
