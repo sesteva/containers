@@ -2,7 +2,8 @@ FROM yeoman
 
 RUN npm install -g generator-polymer
 
-RUN mkdir -p /home/project
+RUN mkdir -p /home/project && \
+    chmod 777 -R /home/project
 
 CMD cd /home/project && \
     npm install && \
