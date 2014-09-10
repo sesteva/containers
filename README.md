@@ -19,7 +19,7 @@ First we checkout the repo:
 
 Then we instantiate a new grunt_angular box
 
-    docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t sesteva/grunt_angular
+    docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t sesteva/grunt-angular
 
 Parameters Explanation:
 
@@ -67,10 +67,10 @@ If you were to push them manually, thats when you execute last command 'docker p
 
     cd /grunt-polymer
     docker build -t sesteva/grunt_polymer .
-    docker push sesteva/grunt_polymer
+    docker push sesteva/grunt-polymer
 
 ### Yeoman  + Angular box
 
     cd /grunt-angular
     docker build -t sesteva/grunt_angular .
-    docker push sesteva/grunt_angular
+    docker push sesteva/grunt-angular
