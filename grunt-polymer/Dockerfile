@@ -1,4 +1,4 @@
-FROM yeoman
+FROM sesteva/yeoman
 
 RUN npm install -g generator-polymer
 
