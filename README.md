@@ -5,8 +5,8 @@ Make sure you have docker installed and proceed.
 ## Pulling Images
 
     docker pull sesteva/yeoman
-    docker pull sesteva/grunt_angular
-    docker pull sesteva/grunt_polymer
+    docker pull sesteva/grunt-angular
+    docker pull sesteva/grunt-polymer
 	docker pull japanvik/deployd
 
 ## Creating a new Instance
