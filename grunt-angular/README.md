@@ -1,7 +1,8 @@
 Usage Example: In your host
 
-	mkdir -p ~/Projects/Personal/muzza
-	cd ~/Projects/Personal/muzza
-	git clone https://github.com/unexpectedprofit-org/muzza.git
-	cd ~/Projects/Docker/grunt_angular && docker build -t grunt_angular .
-	docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t grunt_angular
+	mkdir -p ~/Projects/Personal/nameOfProject
+	cd ~/Projects/Personal/nameOfProject
+	git clone https://github.com/username/nameOfProject.git
+	
+	docker pull sesteva/grunt_angular
+	docker run --name nameOfProject -p 9000:9000 -v ~/Projects/Personal/nameOfProject:/home/project -i -t sesteva/grunt_angular
