@@ -7,6 +7,7 @@ Make sure you have docker installed and proceed.
     docker pull sesteva/yeoman
     docker pull sesteva/grunt-angular
     docker pull sesteva/grunt-polymer
+    docker pull sesteva/grunt-extjs
     docker pull japanvik/deployd
 
 ## Creating a new Instance
