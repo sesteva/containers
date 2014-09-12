@@ -8,7 +8,7 @@ Make sure you have docker installed and proceed.
     docker pull sesteva/grunt-angular
     docker pull sesteva/grunt-polymer
     docker pull sesteva/grunt-extjs
-    docker pull japanvik/deployd
+    docker pull sesteva/deployd
 
 ## Creating a new Instance
 Example: build and run an existing angular grunt project
