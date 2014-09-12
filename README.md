@@ -7,7 +7,7 @@ Make sure you have docker installed and proceed.
     docker pull sesteva/yeoman
     docker pull sesteva/grunt-angular
     docker pull sesteva/grunt-polymer
-	docker pull japanvik/deployd
+    docker pull japanvik/deployd
 
 ## Creating a new Instance
 Example: build and run an existing angular grunt project
@@ -29,6 +29,13 @@ Parameters Explanation:
 - i -> Keep STDIN open even if not attached 
 - t -> llocate a pseudo-tty
 - grunt_angular -> container image being used
+
+### Other boxes
+
+    docker run --name deployd -p 2403:2403 -i -t sesteva/deployd
+    open browser http://localhost:2403/dashboard
+
+
 
 ## Send commands to container with Nsenter
 
@@ -74,3 +81,12 @@ If you were to push them manually, thats when you execute last command 'docker p
     cd /grunt-angular
     docker build -t sesteva/grunt_angular .
     docker push sesteva/grunt-angular
+
+### Deployd box
+
+    cd /deployd
+    docker build -t sesteva/deployd .
+    docker push sesteva/deployd
+
+    
+
