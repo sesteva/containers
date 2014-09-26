@@ -15,6 +15,8 @@ sudo HTTP_PROXY=http://localhost:3128/ docker -d &
 3- In your dockerfile or when you run the container. This will be need by npm/bower
 
 export http_proxy="http://172.17.42.1:3128/"
+npm config set proxy http://172.17.42.1:3128  
+npm config set https-proxy http://172.17.42.1:3128 
 
 
 ## Pulling Images
