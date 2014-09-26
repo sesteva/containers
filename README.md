@@ -2,6 +2,21 @@ If you want to use these images, you do not need to clone this project.
 Images are published to docker registry. 
 Make sure you have docker installed and proceed.
 
+## Behind Proxy
+
+1- update /etc/default/docker 
+
+export http_proxy="http://127.0.0.1:3128/"
+
+2- When running the daemon
+
+sudo HTTP_PROXY=http://localhost:3128/ docker -d &
+
+3- In your dockerfile or when you run the container. This will be need by npm/bower
+
+export http_proxy="http://172.17.42.1:3128/"
+
+
 ## Pulling Images
 
     docker pull sesteva/yeoman
