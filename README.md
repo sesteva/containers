@@ -25,7 +25,12 @@ npm config set https-proxy http://172.17.42.1:3128
     docker pull sesteva/grunt-angular
     docker pull sesteva/grunt-polymer
     docker pull sesteva/grunt-extjs
-    docker pull sesteva/deployd
+    docker pull sesteva/private-bower
+    
+## Third Party Interesting Containers
+     
+     docker pull sesteva/deployd
+     docker pull keyvanfatehi/sinopia:0.12.0
 
 ## Creating a new Instance
 Example: build and run an existing angular grunt project
