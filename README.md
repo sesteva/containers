@@ -46,6 +46,13 @@ I also had to update my squid config to allow the requests from docker ip range
      
 For teamcity take a look at this article: http://ariya.ofilabs.com/2014/07/easy-teamcity-installation-with-docker.html     
 
+TeamCity Server
+sudo docker run -dt -name teamcity_server -p 8111:8111 ariya/centos6-teamcity-server
+
+TeamCity Agent
+sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-01 --link teamcity_server:teamcity_server -it ariya/centos6-teamcity-agent
+
+
 ## Creating a new Instance
 Example: build and run an existing angular grunt project
 First we checkout the repo:
