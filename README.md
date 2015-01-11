@@ -28,6 +28,9 @@ I have a squid instance running on the host on port 3128
    
 I also had to update my squid config to allow the requests from docker ip range
 
+    acl dtslocalnet dst 172.17.0.0/24
+
+
 
 ## Pulling Images
 
