@@ -18,6 +18,18 @@ export http_proxy="http://172.17.42.1:3128/"
 npm config set proxy http://172.17.42.1:3128  
 npm config set https-proxy http://172.17.42.1:3128 
 
+# Linux
+I have a squid instance running on the host on port 3128
+
+    iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 3128
+   
+Inside the container I did
+    export http_proxy="http://172.17.42.1:3128/"
+    export https_proxy="http://172.17.42.1:3128/"
+    git config --global url."https://".insteadOf git://
+
+I also had to update my squid config to allow the requests from docker ip range
+
 
 ## Pulling Images
 
