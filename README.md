@@ -67,7 +67,7 @@ TeamCity Agent
 
 TeamCity Agent with Nodejs Grunt cli bower
 
-     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-01 --link teamcity_server:teamcity_server -it sesteva/centos6-teamcity-agent-nodejs
+     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-02 --link teamcity_server:teamcity_server -it sesteva/centos6-teamcity-agent-nodejs
 
 
 ### Deployd
@@ -90,40 +90,40 @@ Since Yeoman should be used to create files this should not be a problem.
 
  Copy/Past and execute:
 
-    cd /tmp && \
-    wget http://nodejs.org/dist/node-latest.tar.gz && \
-    tar xvzf node-latest.tar.gz && \
-    rm -f node-latest.tar.gz && \
-    cd node-v* && \
-    ./configure && \
-    CXX="g++ -Wno-unused-local-typedefs" make && \
-    sudo CXX="g++ -Wno-unused-local-typedefs" make install && \
-    cd /tmp && \
-    rm -rf /tmp/node-v* && \
-    sudo npm install -g npm
+     cd /tmp && \
+     wget http://nodejs.org/dist/node-latest.tar.gz && \
+     tar xvzf node-latest.tar.gz && \
+     rm -f node-latest.tar.gz && \
+     cd node-v* && \
+     ./configure && \
+     CXX="g++ -Wno-unused-local-typedefs" make && \
+     sudo CXX="g++ -Wno-unused-local-typedefs" make install && \
+     cd /tmp && \
+     rm -rf /tmp/node-v* && \
+     sudo npm install -g npm
 
  Add to your .bashrc
 
-    # Node.js
-    export PATH="node_modules/.bin:$PATH"
+     # Node.js
+     export PATH="node_modules/.bin:$PATH"
 
  Now run
 
-    source ~/.bashrc
-    node -v
-    npm -v
+     source ~/.bashrc
+     node -v
+     npm -v
 
 - Bower
 
-    sudo npm install -g bower
+     sudo npm install -g bower
 
 - Yo
 
-    sudo npm install -g yo
+     sudo npm install -g yo
 
 - Your specific yeoman generator
 
-    sudo npm install -g generator-polymer generator-extjs generator-angular
+     sudo npm install -g generator-polymer generator-extjs generator-angular
 
 ##### Option 1 - New Project Flow
 
