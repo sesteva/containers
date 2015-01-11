@@ -7,9 +7,10 @@ RUN yum -y install wget unzip sudo gcc gcc-c++ kernel-devel tar
 ADD setup-agent.sh /setup-agent.sh
 RUN yum -y install wget unzip sudo
 
-RUN adduser teamcity
-RUN sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers
-RUN usermod -aG sudo teamcity
+RUN adduser teamcity && \
+  sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers && \
+  adduser teamcity sudo
+
 
 RUN \
   cd /tmp && \
