@@ -5,13 +5,13 @@ Usage Example: In your host you would traditionally git clone a project first. T
 	mkdir -p ~/Projects/Personal/polymerLab
 	git clone .....
 	cd ~/Projects/Personal/polymerLab
-	docker run --name nameOfProject -p 9000:9000 -v ~/Projects/Personal/polymerLab:/home/yeoman/project -i -t sesteva/grunt-polymer
+	docker run --name nameOfProject -p 9000:9000 -v ~/Projects/Personal/polymerLab:/home/project -i -t sesteva/grunt-polymer
 
 If you dont have any yeoman project yet, then you should follow these steps instead:
 
 	mkdir -p ~/Projects/Personal/polymerLab
 	cd ~/Projects/Personal/polymerLab
-	docker run --name polymerLab -p 9000:9000 -v ~/Projects/Personal/polymerLab:/home/yeoman/project -i -t sesteva/grunt-polymer /bin/bash
+	docker run --name polymerLab -p 9000:9000 -v ~/Projects/Personal/polymerLab:/home/project -i -t sesteva/grunt-polymer /bin/bash
 
 By passing a command at the end we override the CMD instructions the docker box has (npm install, bower install, grunt serve).
 
