@@ -9,7 +9,7 @@ RUN yum -y install wget unzip sudo
 
 RUN adduser teamcity
 RUN sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers
-RUN usermod -a -G sudo teamcity
+RUN usermod -aG sudo teamcity
 
 RUN \
   cd /tmp && \
