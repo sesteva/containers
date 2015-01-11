@@ -34,6 +34,7 @@ I also had to update my squid config to allow the requests from docker ip range
 
     docker pull sesteva/grunt-sass-cofee
     docker pull sesteva/grunt-project
+    docker pull sesteva/centos6-teamcity-agent-nodejs
 
 Out of Order due to yeoman not running on root
 
@@ -48,6 +49,8 @@ Out of Order due to yeoman not running on root
      docker pull sesteva/private-bower
      docker pull sesteva/deployd
      docker pull keyvanfatehi/sinopia:0.12.0
+     docker pull ariya/centos6-teamcity-server
+     docker pull ariya/centos6-teamcity-agent
 
 
 ### TeamCity
@@ -61,6 +64,11 @@ TeamCity Server
 TeamCity Agent
      
      sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-01 --link teamcity_server:teamcity_server -it ariya/centos6-teamcity-agent
+
+TeamCity Agent with Nodejs Grunt cli bower
+
+     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-01 --link teamcity_server:teamcity_server -it sesteva/centos6-teamcity-agent-nodejs
+
 
 ### Deployd
 
