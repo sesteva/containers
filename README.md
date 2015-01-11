@@ -43,6 +43,8 @@ I also had to update my squid config to allow the requests from docker ip range
      
      docker pull sesteva/deployd
      docker pull keyvanfatehi/sinopia:0.12.0
+     
+For teamcity take a look at this article: http://ariya.ofilabs.com/2014/07/easy-teamcity-installation-with-docker.html     
 
 ## Creating a new Instance
 Example: build and run an existing angular grunt project
