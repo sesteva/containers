@@ -8,9 +8,7 @@ ADD setup-agent.sh /setup-agent.sh
 RUN yum -y install wget unzip sudo
 
 RUN adduser teamcity && \
-  sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers && \
-  adduser teamcity sudo
-
+  sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers
 
 RUN \
   cd /tmp && \
