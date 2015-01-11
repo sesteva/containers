@@ -66,7 +66,7 @@ First we checkout the repo:
 
 Then we instantiate a new grunt_angular box
 
-    docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/project -i -t sesteva/grunt-angular
+    docker run --name muzza -p 9000:9000 -v ~/Projects/Personal/muzza:/home/yeoman/project -i -t sesteva/grunt-angular
 
 Parameters Explanation:
 
