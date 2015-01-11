@@ -10,5 +10,15 @@ CMD cd /home/yeoman/project && \
     bower install --allow-root && \
     grunt serve
 
+RUN adduser --disabled-password --gecos "" yeoman; \
+  echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+ENV HOME /home/yeoman
+
+USER yeoman
+
+WORKDIR /home/yeoman
+
+
 EXPOSE 9000
 
