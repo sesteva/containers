@@ -7,7 +7,7 @@ RUN yum -y install wget unzip sudo gcc gcc-c++ kernel-devel tar
 ADD setup-agent.sh /setup-agent.sh
 RUN yum -y install wget unzip sudo
 
-RUN adduser --disabled-password --gecos "" teamcity
+RUN adduser teamcity
 RUN sed -i -e "s/%sudo.*$/%sudo ALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers
 RUN usermod -a -G sudo teamcity
 
