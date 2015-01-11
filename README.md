@@ -63,11 +63,11 @@ TeamCity Server
 
 TeamCity Agent
      
-     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-01 --link teamcity_server:teamcity_server -it ariya/centos6-teamcity-agent
+     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity_agent-01 --link teamcity_server:teamcity_server -dt ariya/centos6-teamcity-agent
 
 TeamCity Agent with Nodejs Grunt cli bower
 
-     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity-agent-02 --link teamcity_server:teamcity_server -it sesteva/centos6-teamcity-agent-nodejs
+     sudo docker run -e TEAMCITY_SERVER=http://172.17.42.1:8111 --name teamcity_agent-02 --link teamcity_server:teamcity_server -dt sesteva/centos6-teamcity-agent-nodejs
 
 
 ### Deployd
