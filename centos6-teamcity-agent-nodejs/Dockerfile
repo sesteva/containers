@@ -10,7 +10,7 @@ RUN yum -y update
 
 RUN chmod +x /setup-agent.sh
 
-RUN yum -y install sudo wget unzip gcc gcc-c++ kernel-devel tar unzip git nodejs httpd xorg-x11-server-Xvfb firefox
+RUN yum -y install sudo wget unzip gcc gcc-c++ kernel-devel tar unzip git httpd xorg-x11-server-Xvfb firefox
 
 RUN useradd -d /home/teamcity -m -s /bin/bash -p 123456 teamcity
 RUN echo -e "teamcity\tALL=(ALL)\tNOPASSWD: ALL\n" >> /etc/sudoers
