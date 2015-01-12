@@ -10,15 +10,17 @@ RUN yum -y update
 
 RUN chmod +x /setup-agent.sh
 
-RUN yum -y install wget unzip sudo gcc gcc-c++ kernel-devel tar unzip git nodejs httpd xorg-x11-server-Xvfb firefox
+RUN yum -y install sudo wget unzip sudo gcc gcc-c++ kernel-devel tar unzip git nodejs httpd xorg-x11-server-Xvfb firefox
+
+RUN useradd -d /home/teamcity -m -s /bin/bash -p 123456 teamcity
+
+RUN npm install -g npm
 RUN npm install -g bower grunt grunt-cli
-
-## RUN mkdir -p /usr/local/lib/selenium && wget -q -P /usr/local/lib/selenium http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar
-
-RUN adduser teamcity
 
 EXPOSE 9090
 
-CMD sudo -u teamcity -s -- sh -c "TEAMCITY_SERVER=$TEAMCITY_SERVER bash /setup-agent.sh run"
+USER teamcity
+
+CMD sh -c "TEAMCITY_SERVER=$TEAMCITY_SERVER bash /setup-agent.sh run"
 
 
