@@ -5,7 +5,7 @@ MAINTAINER Santiago Esteva <santiagoesteva@gmail.com>
 ADD setup-agent.sh /setup-agent.sh
 
 # Enable Epel repo to get nodejs/npm
-RUN yum install epel-release
+RUN yum -y install epel-release
 RUN yum -y update
 
 RUN chmod +x /setup-agent.sh
